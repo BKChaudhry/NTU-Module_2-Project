@@ -1,0 +1,12 @@
+[
+  {
+    "entity": "raw_oil_prices",
+    "path": "/home/rakhi/projects/oil-price-pipeline/data/oil_geopolitics_dataset_2010_2026.csv",
+    "keys": ["date"]
+  },
+  {
+    "entity": "raw_geo_events",
+    "path": "/home/rakhi/projects/oil-price-pipeline/data/geopolitical_events_timeline.csv",
+    "keys": ["date"]
+  }
+]

@@ -1,0 +1,24 @@
+default_environment: dev
+project_id: 019cf2c8-67f7-73bf-864d-cd99398f8e8a
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      csv_files_definition: csv_files_definition.json
+  loaders:
+  - name: target-bigquery
+    variant: z3z1ma
+    pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+    config:
+      project: module-2-project-490315
+      dataset: oil_pipeline_raw
+      location: US
+      method: storage_write_api
+      denormalized: true
+      overwrite: true
